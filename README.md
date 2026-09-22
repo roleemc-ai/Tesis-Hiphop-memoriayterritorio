@@ -1,0 +1,2 @@
+# Tesis-Hiphop-memoriayterritorio
+MEMORIA Y TERRITORIO HIPHOP BARRIO EL CODITO
