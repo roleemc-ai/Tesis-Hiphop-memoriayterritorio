@@ -2,801 +2,411 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0a0809">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memoria y Territorio · Hip Hop en El Codito</title>
-<meta name="description" content="Investigación de tesis sobre memoria, territorio e hip hop en el barrio El Codito, Bogotá. Un proyecto del Campamento del Conocimiento Hip Hop.">
-<link rel="icon" href="logo-campamento.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<title>Memoria y Territorio · Hiphop en El Codito</title>
+<meta name="description" content="Tesis sobre memoria, territorio e Hiphop en el barrio El Codito, Bogotá. Un proyecto del Campamento del Conocimiento Hiphop.">
+<link rel="icon" id="fav" href="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
+:root{--bk:#0a0809;--bk2:#141011;--red:#ff2a45;--red2:#9c1226;--paper:#efe7d4;--mut:#b9ada0;--line:rgba(239,231,212,.14);--w:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bk);color:var(--paper);font:400 1.02rem/1.7 'Lora',Georgia,serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 600px 400px at 8% 6%,rgba(255,42,69,.14),transparent 65%),radial-gradient(ellipse 500px 380px at 95% 70%,rgba(156,18,38,.2),transparent 65%)}
+header,main,section,footer{position:relative;z-index:1}
+h1,h2,h3{font-family:'Anton','Arial Narrow',sans-serif;font-weight:400;letter-spacing:.015em;line-height:1.04;margin:0}
+a{color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+section{padding:76px 0}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,8,9,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--red);box-shadow:0 0 18px rgba(255,42,69,.35)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:1rem/1.15 'Anton',sans-serif}
+.brand img{width:44px;height:44px;border-radius:50%;border:2px solid var(--red)}
+.brand small{display:block;font:.68rem 'Lora',serif;color:var(--mut)}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+.links a{text-decoration:none;font-size:.9rem;padding:6px 2px;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{border-color:var(--red);color:#fff}
+.burger{display:none;background:none;border:2px solid var(--red);color:var(--red);font:1rem 'Anton',sans-serif;padding:7px 12px;cursor:pointer}
+@media(max-width:860px){.burger{display:block}.links{display:none;width:100%;flex-direction:column;gap:12px;padding-bottom:10px}.links.open{display:flex}}
+.hero{padding:92px 0 76px;border-bottom:1px solid var(--line)}
+.kick{color:var(--red);font-style:italic;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.kick::before{content:"";width:44px;height:2px;background:var(--red);box-shadow:0 0 10px var(--red)}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);text-shadow:0 0 22px rgba(255,42,69,.45)}
+.hero h1 em{font-style:normal;color:var(--red);text-shadow:0 0 14px var(--red),0 0 38px rgba(255,42,69,.6)}
+.lede{max-width:640px;margin-top:22px;font-size:1.15rem;color:var(--mut)}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px;color:var(--mut);font-size:.82rem}
+.stats b{display:block;font:1.6rem 'Anton',sans-serif;color:var(--red)}
+.btn{display:inline-block;margin-top:26px;padding:12px 22px;border:2px solid var(--red);color:var(--paper);text-decoration:none;font:1rem 'Anton',sans-serif;letter-spacing:.04em;box-shadow:0 0 14px rgba(255,42,69,.4),inset 0 0 14px rgba(255,42,69,.15);transition:.2s}
+.btn:hover{background:var(--red);color:#000}
+.head{max-width:660px;margin-bottom:36px}.head h2{font-size:clamp(1.9rem,4vw,2.7rem)}
+.rule{height:3px;border:0;margin:0;background:linear-gradient(90deg,transparent,var(--red),transparent);box-shadow:0 0 12px var(--red)}
+.grid2{display:grid;grid-template-columns:1.1fr 1fr;gap:42px}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--bk2);border:1px solid var(--line);border-left:4px solid var(--red);padding:18px 22px;margin-bottom:14px}
+.card h3{font:600 1.05rem 'Lora',serif;margin-bottom:6px}.card p,.card li{margin:0;color:var(--mut);font-size:.95rem}.card ol{padding-left:20px;margin:0}
+.q{font:1.55rem/1.25 'Anton',sans-serif;color:var(--paper);border-left:4px solid var(--red);padding-left:18px;margin:22px 0;text-shadow:0 0 18px rgba(255,42,69,.3)}
+.tl{border-left:3px solid var(--red2);margin-left:14px;padding-left:34px}
+.gen{position:relative;padding-bottom:40px}.gen:last-child{padding-bottom:0}
+.gen::before{content:attr(data-n);position:absolute;left:-56px;top:-2px;width:40px;height:40px;border-radius:50%;background:var(--red);color:#000;display:grid;place-items:center;font:1.05rem 'Anton',sans-serif;box-shadow:0 0 14px var(--red)}
+.gen .y{font:1.3rem 'Anton',sans-serif;color:var(--red)}.gen h3{font:600 1.2rem 'Lora',serif;margin:2px 0 6px}.gen p{margin:0;color:var(--mut);max-width:62ch}
+.colectivo .wrap{display:grid;grid-template-columns:210px 1fr;gap:44px;align-items:center}
+.colectivo img{width:200px;height:200px;border-radius:50%;border:3px solid var(--red);box-shadow:0 0 30px rgba(255,42,69,.55)}
+.colectivo p{color:var(--mut);max-width:60ch}
+@media(max-width:720px){.colectivo .wrap{grid-template-columns:1fr;text-align:center}.colectivo img{margin:0 auto}}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.vc{background:var(--bk2);border:1px solid var(--line)}
+.vf{position:relative;padding-top:56.25%;background:#000}
+.vf iframe,.vf .ph{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ph{display:grid;place-content:center;text-align:center;color:var(--mut);font-style:italic;font-size:.88rem;padding:14px}
+.ph i{display:block;font:normal 1.6rem 'Anton',sans-serif;color:var(--red);text-shadow:0 0 12px var(--red);margin-bottom:6px}
+.vi{padding:14px 18px}.vi h3{font:600 1.02rem 'Lora',serif}.vi small{color:var(--red);font-style:italic}
+.featured{max-width:820px;margin:0 auto 34px;border:1px solid var(--red);box-shadow:0 0 24px rgba(255,42,69,.3)}
+.notice{border:1px solid var(--red);background:linear-gradient(135deg,rgba(255,42,69,.1),transparent);padding:26px 28px}
+.notice h2{font-size:1.7rem;margin-bottom:10px}.notice p{margin:.6em 0;max-width:80ch}
+footer{padding:44px 0 28px;border-top:1px solid var(--line);color:var(--mut);font-size:.85rem}
+#loader{position:fixed;inset:0;z-index:999;background:#000;display:grid;place-items:center;text-align:center;transition:opacity .7s,visibility .7s}
+#loader.off{opacity:0;visibility:hidden}
+#loader img{width:170px;height:170px;border-radius:50%;border:3px solid var(--red);margin:0 auto 24px;animation:neon 1.8s ease-in-out infinite,flick 5s infinite}
+#loader p{font:1.05rem 'Anton',sans-serif;letter-spacing:.3em;color:var(--red);text-shadow:0 0 12px var(--red);margin:0}
+.bar{width:180px;height:3px;margin:14px auto 0;background:#2a1014;overflow:hidden}.bar i{display:block;height:100%;width:40%;background:var(--red);box-shadow:0 0 10px var(--red);animation:run 1.2s linear infinite}
+@keyframes neon{0%,100%{box-shadow:0 0 14px var(--red),0 0 40px rgba(255,42,69,.5),inset 0 0 18px rgba(255,42,69,.35)}50%{box-shadow:0 0 28px var(--red),0 0 80px rgba(255,42,69,.8),inset 0 0 30px rgba(255,42,69,.55)}}
+@keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.5}95%{opacity:1}97%{opacity:.6}}
+@keyframes run{from{transform:translateX(-100%)}to{transform:translateX(450%)}}
+.tools{display:flex;gap:14px;margin-bottom:12px}
+.tools input{flex:1;min-width:220px;background:var(--bk2);border:1px solid var(--line);color:var(--paper);padding:12px 14px;font:inherit}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 8px}
+.chip{background:none;border:1px solid var(--line);color:var(--mut);padding:6px 14px;cursor:pointer;font:.85rem 'Lora',serif;border-radius:20px}
+.chip.on,.chip:hover{border-color:var(--red);color:#fff;box-shadow:0 0 10px rgba(255,42,69,.45)}
+.cnt{color:var(--mut);font-size:.85rem;margin:6px 0 22px}
+.rc{background:var(--bk2);border:1px solid var(--line);display:block;text-decoration:none;transition:.2s}
+.rc:hover{border-color:var(--red);box-shadow:0 0 18px rgba(255,42,69,.35);transform:translateY(-2px)}
+.th{position:relative;padding-top:56.25%;background:#000 center/cover}
+.th span{position:absolute;inset:0;display:grid;place-items:center;font:1.1rem 'Anton',sans-serif;letter-spacing:.1em;color:var(--red);text-shadow:0 0 10px var(--red)}
+.rb{padding:14px 16px 16px}.rb small{color:var(--red);font-style:italic}.rb h3{font:600 1rem 'Lora',serif;margin:3px 0 6px}
+.rb p{margin:0;color:var(--mut);font-size:.88rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#modal{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.9);display:none;place-items:center;padding:20px}
+#modal.on{display:grid}#modal .box{width:min(960px,100%)}
+#modal .vf{box-shadow:0 0 30px rgba(255,42,69,.5)}
+#x{background:none;border:0;color:var(--red);font:1rem 'Anton',sans-serif;cursor:pointer;margin:0 0 8px auto;display:block}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
 
-  :root{
-    --bg-dark:#171410;
-    --bg-dark-2:#1f1b15;
-    --paper:#efe7d4;
-    --paper-2:#e6dcc2;
-    --ochre:#b8752a;
-    --brick:#7c3226;
-    --gold:#d8a73d;
-    --magenta:#b23a63;
-    --teal:#2f7a6b;
-    --ink:#1c1a16;
-    --ink-soft:#3a352c;
-    --line:#c9bfa4;
-    --cream-line: rgba(239,231,212,0.16);
-    --max-w: 1120px;
-    --radius: 2px;
-    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    --speckle:
-      radial-gradient(circle 2px at 20% 30%, rgba(216,167,61,0.5), transparent 100%),
-      radial-gradient(circle 3px at 65% 15%, rgba(124,50,38,0.45), transparent 100%),
-      radial-gradient(circle 2px at 80% 60%, rgba(178,58,99,0.4), transparent 100%),
-      radial-gradient(circle 2px at 40% 75%, rgba(47,122,107,0.4), transparent 100%),
-      radial-gradient(circle 1.5px at 10% 85%, rgba(216,167,61,0.5), transparent 100%),
-      radial-gradient(circle 2px at 55% 45%, rgba(124,50,38,0.4), transparent 100%),
-      radial-gradient(circle 1.5px at 90% 25%, rgba(178,58,99,0.4), transparent 100%);
-  }
+/* ===== MEJORAS: textura, color, hero, generaciones, anécdotas ===== */
+html,body{overflow-x:hidden}body{background:#070506}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.1;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.crim{background:radial-gradient(ellipse 90% 130% at 15% 0,#4a0f1a 0,#1a070b 55%,#0a0809 100%)}
+.alt{background:linear-gradient(180deg,#120a0c,#0a0809 70%)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 42%,rgba(255,42,69,.3),transparent 46%),radial-gradient(circle at 4% 92%,rgba(156,18,38,.4),transparent 42%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.55;background:radial-gradient(circle 3px at 12% 22%,#ff2a45,transparent 100%),radial-gradient(circle 2px at 30% 70%,#ff2a45aa,transparent 100%),radial-gradient(circle 4px at 62% 15%,#9c1226,transparent 100%),radial-gradient(circle 2px at 88% 78%,#ff2a45aa,transparent 100%),radial-gradient(circle 2px at 48% 50%,#efe7d455,transparent 100%),radial-gradient(circle 3px at 75% 90%,#9c1226,transparent 100%),radial-gradient(circle 2px at 5% 55%,#efe7d455,transparent 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr .8fr;gap:40px;align-items:center}
+.ring{position:relative;width:min(340px,80%);margin:0 auto}
+.ring::after{content:"";position:absolute;inset:-18px;border:2px dashed rgba(255,42,69,.55);border-radius:50%;animation:spin 40s linear infinite}
+.hero-logo{width:100%;aspect-ratio:1;border-radius:50%;box-shadow:0 0 30px var(--red),0 0 90px rgba(255,42,69,.55),inset 0 0 30px rgba(255,42,69,.3);animation:neon 2.4s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.ring{width:220px}}
+.hero .btn+.btn{margin-left:10px}
+.mq{overflow:hidden;background:var(--red);color:#000;border-block:2px solid #000;transform:rotate(-1deg);margin:-14px -10px 0;position:relative;z-index:3;box-shadow:0 0 26px rgba(255,42,69,.55)}
+.mq div{display:inline-block;white-space:nowrap;padding:10px 0;font:1.25rem 'Anton',sans-serif;letter-spacing:.14em;animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.head .kick{font:1rem 'Anton',sans-serif;letter-spacing:.22em;font-style:normal;text-transform:uppercase}
+.card{background:linear-gradient(160deg,#1a0d11,#0e0a0b);transition:.25s}.card:hover{box-shadow:0 0 22px rgba(255,42,69,.25)}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.js .rv.in{opacity:1;transform:none}
+.gens{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.g{position:relative;background:linear-gradient(160deg,#1c0d11,#0d0809);border:1px solid var(--line);border-top:3px solid var(--red);padding:26px 22px 22px;overflow:hidden;transition:.25s}
+.g:hover{transform:translateY(-4px);box-shadow:0 0 26px rgba(255,42,69,.35)}
+.g .n{position:absolute;right:10px;top:-14px;font:7rem/1 'Anton',sans-serif;color:rgba(255,42,69,.13)}
+.g .y{font:1.6rem 'Anton',sans-serif;color:var(--red);text-shadow:0 0 14px rgba(255,42,69,.55);position:relative}
+.g h3{font:600 1.15rem 'Lora',serif;margin:6px 0 10px;position:relative}
+.g p{margin:0 0 10px;color:var(--mut);font-size:.93rem}
+.g b{display:block;font:.72rem 'Anton',sans-serif;letter-spacing:.14em;color:var(--red);margin:10px 0 4px}
+.g ul{margin:0;padding-left:18px;font-size:.84rem}
+.form label{display:block;font:.8rem 'Anton',sans-serif;letter-spacing:.12em;color:var(--red);margin:14px 0 6px}
+.form input[type=text],.form select,.form textarea{width:100%;background:#0e0a0b;border:1px solid var(--line);color:var(--paper);padding:12px 14px;font:inherit}
+.form textarea{min-height:150px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--red);box-shadow:0 0 12px rgba(255,42,69,.4);outline:0}
+.form .ck{display:flex;gap:10px;align-items:flex-start;margin:14px 0}
+.form .ck label{font:.85rem 'Lora',serif;letter-spacing:0;color:var(--mut);margin:0}
+button.btn{cursor:pointer;background:none;margin-top:6px}
+.msg{margin-top:12px;color:var(--red);font-style:italic}
+.an{background:#120c0d;border:1px solid var(--line);border-left:4px solid var(--red);padding:16px 20px;margin-bottom:14px}
+.an p{margin:0 0 6px}.an small{color:var(--red);font-style:italic}
+.th{display:block}.play{cursor:pointer}.ver{display:inline-block;margin-top:10px;color:var(--red);font-size:.85rem;text-decoration:none;border-bottom:1px solid var(--red)}#grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Lora', Georgia, 'Times New Roman', serif;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-  }
-  body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background-image:var(--grain);
-    background-size:180px 180px;
-    opacity:0.5;
-    mix-blend-mode:multiply;
-    pointer-events:none;
-    z-index:1;
-  }
-  header, .hero, section, footer{ position:relative; z-index:2; }
-
-  h1,h2,h3,.display{
-    font-family:'Anton', 'Arial Narrow', sans-serif;
-    font-weight:400;
-    letter-spacing:0.01em;
-    line-height:1.02;
-    margin:0;
-    color:var(--ink);
-  }
-
-  a{color:inherit;}
-
-  img{max-width:100%; display:block;}
-
-  .wrap{
-    max-width:var(--max-w);
-    margin:0 auto;
-    padding:0 24px;
-  }
-
-  /* focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible{
-    outline:3px solid var(--gold);
-    outline-offset:2px;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
-  }
-
-  /* ---------- NAV ---------- */
-  header.site-nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:var(--bg-dark);
-    border-bottom:3px solid var(--gold);
-  }
-  .nav-inner{
-    max-width:var(--max-w);
-    margin:0 auto;
-    padding:14px 24px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:var(--paper);
-    text-decoration:none;
-  }
-  .brand-mark{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    border:2px solid var(--gold);
-    object-fit:cover;
-    flex-shrink:0;
-    background:var(--bg-dark-2);
-  }
-  .brand-text{
-    font-family:'Anton', sans-serif;
-    font-size:0.95rem;
-    letter-spacing:0.02em;
-    line-height:1.15;
-  }
-  .brand-text span{
-    display:block;
-    font-family:'Lora', serif;
-    font-size:0.68rem;
-    color:var(--line);
-    letter-spacing:0.02em;
-    margin-top:2px;
-  }
-  nav.links{
-    display:flex;
-    gap:22px;
-    flex-wrap:wrap;
-  }
-  nav.links a{
-    color:var(--paper);
-    text-decoration:none;
-    font-size:0.92rem;
-    padding:6px 2px;
-    border-bottom:2px solid transparent;
-  }
-  nav.links a:hover{ border-bottom-color:var(--gold); }
-
-  .nav-toggle{
-    display:none;
-    background:none;
-    border:2px solid var(--gold);
-    color:var(--gold);
-    font-family:'Anton',sans-serif;
-    padding:8px 12px;
-    cursor:pointer;
-  }
-
-  @media (max-width:760px){
-    nav.links{
-      display:none;
-      flex-direction:column;
-      width:100%;
-      background:var(--bg-dark-2);
-      padding:16px 24px 20px;
-      gap:14px;
-      border-top:1px solid var(--cream-line);
-    }
-    nav.links.open{ display:flex; }
-    .nav-toggle{ display:inline-block; }
-    header.site-nav{ flex-wrap:wrap; }
-    .nav-inner{ flex-wrap:wrap; }
-  }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    background:var(--bg-dark);
-    color:var(--paper);
-    padding:96px 24px 80px;
-    overflow:hidden;
-    border-bottom:6px solid var(--brick);
-  }
-  .hero::before{
-    /* textura tipo pared / spray, generada sin imágenes externas */
-    content:"";
-    position:absolute; inset:0;
-    background:
-      var(--speckle),
-      radial-gradient(ellipse 520px 360px at 10% 15%, rgba(216,167,61,0.30), transparent 62%),
-      radial-gradient(ellipse 560px 400px at 92% 85%, rgba(124,50,38,0.42), transparent 64%),
-      radial-gradient(ellipse 340px 260px at 74% 8%, rgba(178,58,99,0.26), transparent 60%),
-      radial-gradient(ellipse 300px 240px at 4% 88%, rgba(47,122,107,0.24), transparent 58%);
-    background-size:auto, auto, auto, auto, auto;
-    pointer-events:none;
-  }
-  .hero::after{
-    content:"";
-    position:absolute; inset:0;
-    background-image:var(--grain);
-    background-size:180px 180px;
-    opacity:0.35;
-    mix-blend-mode:overlay;
-    pointer-events:none;
-  }
-  .hero-inner{
-    position:relative;
-    max-width:var(--max-w);
-    margin:0 auto;
-  }
-  .eyebrow-line{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:22px;
-    color:var(--gold);
-    font-family:'Lora', serif;
-    font-style:italic;
-    font-size:0.98rem;
-  }
-  .eyebrow-line::before{
-    content:"";
-    width:46px;
-    height:2px;
-    background:var(--gold);
-  }
-  .hero h1{
-    font-size:clamp(2.6rem, 7vw, 5.2rem);
-    color:var(--paper);
-    text-shadow:
-      3px 0 0 rgba(124,50,38,0.55),
-      -3px 0 0 rgba(47,122,107,0.35),
-      0 4px 0 rgba(0,0,0,0.25);
-  }
-  .hero h1 em{
-    font-style:normal;
-    color:var(--gold);
-    text-shadow:
-      3px 0 0 rgba(178,58,99,0.55),
-      -3px 0 0 rgba(124,50,38,0.4),
-      0 4px 0 rgba(0,0,0,0.25);
-  }
-  .hero p.lede{
-    max-width:640px;
-    margin-top:26px;
-    font-size:1.15rem;
-    color:var(--paper-2);
-  }
-  .hero .place{
-    margin-top:34px;
-    display:flex;
-    gap:28px;
-    flex-wrap:wrap;
-    font-family:'Lora', serif;
-    color:var(--line);
-  }
-  .hero .place strong{
-    display:block;
-    font-family:'Anton', sans-serif;
-    color:var(--paper);
-    font-size:1.5rem;
-  }
-  .hero .place small{ font-size:0.8rem; }
-  .hero .place div:nth-child(1) strong{ color:var(--gold); }
-  .hero .place div:nth-child(2) strong{ color:var(--magenta); }
-  .hero .place div:nth-child(3) strong{ color:var(--teal); }
-
-  /* ---------- SECTION GENERAL ---------- */
-  section{ padding:80px 0; }
-  .section-head{
-    max-width:640px;
-    margin-bottom:44px;
-  }
-  .section-head .kicker{
-    font-family:'Lora', serif;
-    font-style:italic;
-    color:var(--brick);
-    margin-bottom:8px;
-    display:flex;
-    align-items:center;
-    gap:9px;
-  }
-  .section-head .kicker::before{
-    content:"";
-    width:11px;
-    height:11px;
-    border-radius:50% 40% 55% 45%;
-    background:var(--ochre);
-    box-shadow:5px 2px 0 -2px var(--magenta), -4px 3px 0 -3px var(--teal);
-    flex-shrink:0;
-  }
-  .section-head h2{
-    font-size:clamp(1.9rem, 4vw, 2.7rem);
-  }
-  .rule{
-    height:6px;
-    background:repeating-linear-gradient(90deg,
-      var(--brick) 0 22px,
-      var(--ochre) 22px 44px,
-      var(--magenta) 44px 58px,
-      var(--teal) 58px 72px);
-    border:none;
-    margin:0;
-  }
-
-  /* ---------- TESIS ---------- */
-  .tesis-grid{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:48px;
-    align-items:start;
-  }
-  .tesis-grid p{ font-size:1.06rem; color:var(--ink-soft); max-width:62ch; }
-  .fact-card{
-    background:var(--paper-2);
-    border-left:5px solid var(--ochre);
-    padding:22px 24px;
-    margin-bottom:16px;
-  }
-  .fact-card h3{
-    font-size:1.1rem;
-    font-family:'Lora', serif;
-    font-weight:600;
-    margin-bottom:6px;
-  }
-  .fact-card p{ margin:0; font-size:0.95rem; color:var(--ink-soft); max-width:none;}
-  @media (max-width:820px){
-    .tesis-grid{ grid-template-columns:1fr; }
-  }
-
-  /* ---------- COLECTIVO ---------- */
-  .colectivo{
-    background:var(--bg-dark);
-    color:var(--paper);
-    position:relative;
-    overflow:hidden;
-  }
-  .colectivo::before{
-    content:"";
-    position:absolute; inset:0;
-    background:
-      var(--speckle),
-      radial-gradient(ellipse 420px 320px at 90% 10%, rgba(178,58,99,0.22), transparent 60%),
-      radial-gradient(ellipse 380px 300px at 6% 90%, rgba(47,122,107,0.22), transparent 60%);
-    pointer-events:none;
-  }
-  .colectivo .wrap{
-    position:relative;
-    display:grid;
-    grid-template-columns:220px 1fr;
-    gap:48px;
-    align-items:center;
-  }
-  .colectivo-badge{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    border:3px solid var(--gold);
-    object-fit:cover;
-    margin:0 auto;
-    display:block;
-  }
-  .colectivo h2{ color:var(--paper); font-size:clamp(1.8rem,4vw,2.4rem); margin-bottom:18px;}
-  .colectivo p{ color:var(--paper-2); max-width:60ch; font-size:1.02rem;}
-  @media (max-width:720px){
-    .colectivo .wrap{ grid-template-columns:1fr; text-align:center; }
-  }
-
-  /* ---------- LINEA DE TIEMPO ---------- */
-  .timeline{
-    border-left:4px solid var(--brick);
-    margin-left:12px;
-    padding-left:36px;
-  }
-  .gen{
-    position:relative;
-    padding-bottom:52px;
-  }
-  .gen:last-child{ padding-bottom:0; }
-  .gen::before{
-    content:attr(data-num);
-    position:absolute;
-    left:-58px;
-    top:-4px;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:var(--brick);
-    color:var(--paper);
-    font-family:'Anton', sans-serif;
-    font-size:1.05rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 0 0 4px var(--paper);
-  }
-  .gen:nth-child(1)::before{ background:var(--brick); }
-  .gen:nth-child(2)::before{ background:var(--ochre); }
-  .gen:nth-child(3)::before{ background:var(--magenta); }
-  .gen:nth-child(4)::before{ background:var(--teal); }
-  .gen:nth-child(1) .years{ color:var(--brick); }
-  .gen:nth-child(2) .years{ color:var(--ochre); }
-  .gen:nth-child(3) .years{ color:var(--magenta); }
-  .gen:nth-child(4) .years{ color:var(--teal); }
-  .gen .years{
-    font-family:'Anton', sans-serif;
-    color:var(--ochre);
-    font-size:1.3rem;
-    margin-bottom:4px;
-  }
-  .gen h3{
-    font-family:'Lora', serif;
-    font-weight:600;
-    font-size:1.25rem;
-    margin-bottom:8px;
-  }
-  .gen p{ color:var(--ink-soft); max-width:62ch; margin:0;}
-  .gen .tag{
-    display:inline-block;
-    margin-top:10px;
-    font-size:0.78rem;
-    font-style:italic;
-    font-family:'Lora', serif;
-    color:var(--brick);
-  }
-
-  /* ---------- ENTREVISTAS ---------- */
-  .entrevistas-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
-    gap:28px;
-  }
-  .video-card{
-    background:var(--paper-2);
-    border:1px solid var(--line);
-  }
-  .video-frame{
-    position:relative;
-    width:100%;
-    padding-top:56.25%; /* 16:9 */
-    background:var(--bg-dark);
-    overflow:hidden;
-  }
-  .video-frame iframe{
-    position:absolute; inset:0;
-    width:100%; height:100%;
-    border:0;
-  }
-  .video-frame .placeholder{
-    position:absolute; inset:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:var(--line);
-    font-family:'Lora', serif;
-    font-style:italic;
-    font-size:0.9rem;
-    text-align:center;
-    padding:16px;
-    gap:8px;
-  }
-  .video-frame .placeholder .icon{
-    width:44px; height:44px;
-    border:2px solid var(--gold);
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    color:var(--gold);
-    font-family:'Anton', sans-serif;
-    font-size:1.1rem;
-  }
-  .video-info{ padding:18px 20px; }
-  .video-info h3{
-    font-family:'Lora', serif;
-    font-weight:600;
-    font-size:1.08rem;
-    margin-bottom:4px;
-  }
-  .video-info .role{
-    display:block;
-    font-size:0.85rem;
-    color:var(--brick);
-    font-style:italic;
-    margin-bottom:10px;
-  }
-  .video-info p{ font-size:0.92rem; color:var(--ink-soft); margin:0;}
-
-  /* ---------- ARCHIVO EN CONSTRUCCIÓN ---------- */
-  .archivo{
-    background:var(--paper-2);
-    border-top:3px dashed var(--ochre);
-    border-bottom:3px dashed var(--ochre);
-    background-image:var(--speckle);
-  }
-  .archivo-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:22px;
-  }
-  .archivo-card{
-    border:1px dashed var(--ink-soft);
-    padding:24px 20px;
-    min-height:150px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-    color:var(--ink-soft);
-    font-style:italic;
-  }
-  .archivo-card strong{
-    display:block;
-    font-style:normal;
-    font-family:'Anton', sans-serif;
-    color:var(--brick);
-    font-size:1.05rem;
-    margin-bottom:6px;
-  }
-
-  /* ---------- CONTACTO / FOOTER ---------- */
-  footer{
-    background:var(--bg-dark);
-    color:var(--paper-2);
-    padding:64px 0 32px;
-  }
-  footer h2{ color:var(--paper); font-size:clamp(1.6rem,4vw,2.1rem); margin-bottom:14px;}
-  footer p{ max-width:56ch; color:var(--line); }
-  .foot-meta{
-    margin-top:40px;
-    padding-top:24px;
-    border-top:1px solid var(--cream-line);
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:12px;
-    font-size:0.82rem;
-    color:var(--line);
-  }
-
+/* ===== PULIDO PROFESIONAL ===== */
+:root{--hair:rgba(239,231,212,.1);--r:6px;--ease:cubic-bezier(.2,.7,.2,1)}
+::selection{background:var(--red);color:#000}
+html{scroll-padding-top:78px}
+*{scrollbar-width:thin;scrollbar-color:#9c1226 #0a0809}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#0a0809}::-webkit-scrollbar-thumb{background:#9c1226;border-radius:6px}
+body{counter-reset:sec;text-rendering:optimizeLegibility}
+h1,h2,h3{text-wrap:balance}
+.prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;background:var(--red);box-shadow:0 0 12px var(--red);transform-origin:0 50%;transform:scaleX(0)}
+.nav .wrap{transition:padding .3s var(--ease)}.brand img{transition:.3s var(--ease)}
+.nav.sm .wrap{padding-top:7px;padding-bottom:7px}.nav.sm .brand img{width:36px;height:36px}
+.links a{position:relative;border:0;padding:8px 2px;letter-spacing:.06em;font-size:.82rem;text-transform:uppercase;color:var(--mut);transition:color .25s}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--red);box-shadow:0 0 8px var(--red);transform:scaleX(0);transition:transform .3s var(--ease)}
+.links a:hover,.links a.on{color:#fff;border:0}.links a:hover::after,.links a.on::after{transform:scaleX(1)}
+section{padding:96px 0}
+.head{margin-bottom:46px}
+.head h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+.head:has(h2){counter-increment:sec}
+.head h2::before{content:counter(sec,decimal-leading-zero);display:block;font:.95rem 'Anton',sans-serif;letter-spacing:.3em;color:var(--red);margin-bottom:10px;text-shadow:0 0 10px rgba(255,42,69,.6)}
+.head h2::after{content:"";display:block;width:64px;height:3px;margin-top:16px;background:var(--red);box-shadow:0 0 12px var(--red)}
+.hero{padding:110px 0 96px}.hero h1{line-height:1}
+.lede{font-size:1.2rem}
+.stats{gap:0;margin-top:36px;border:1px solid var(--hair);border-radius:var(--r);width:max-content;max-width:100%;background:rgba(10,8,9,.55);backdrop-filter:blur(4px)}
+.stats>div{padding:14px 26px;border-right:1px solid var(--hair)}.stats>div:last-child{border:0}
+.btn{border-radius:3px;letter-spacing:.1em;font-size:.95rem;transition:.3s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 28px rgba(255,42,69,.7)}
+.card,.g,.vc,.rc,.an,.notice{border-radius:var(--r)}
+.card{border-left-width:3px;padding:22px 24px}
+.vc,.rc{overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.featured{overflow:hidden}
+.notice{box-shadow:0 0 30px rgba(255,42,69,.12)}
+.rc{transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.rc:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(0,0,0,.5),0 0 22px rgba(255,42,69,.3)}
+.th{transition:filter .4s}.rc:hover .th{filter:brightness(1.15) saturate(1.1)}
+.th::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(10,8,9,.88));pointer-events:none}
+.th span{z-index:1}
+.play span{font-size:0}
+.play span::before{content:"▶";font:1.15rem 'Anton',sans-serif;letter-spacing:0;width:60px;height:60px;display:grid;place-items:center;padding-left:4px;border-radius:50%;border:2px solid var(--red);background:rgba(10,8,9,.62);color:var(--red);box-shadow:0 0 18px rgba(255,42,69,.6),inset 0 0 12px rgba(255,42,69,.3);transition:.3s var(--ease)}
+.rc:hover .play span::before{transform:scale(1.12);background:var(--red);color:#000}
+.rb{padding:16px 18px 18px}
+.rb small{display:inline-block;padding:3px 10px;border:1px solid rgba(255,42,69,.5);border-radius:20px;font:.66rem 'Anton',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(255,42,69,.07)}
+.rb h3{margin:10px 0 6px}
+.chip{padding:7px 16px;transition:.25s}
+.tools input{border-radius:var(--r);padding:14px 18px 14px 46px;background:#0e0a0b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23ff2a45' stroke-width='2'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M13 13l4 4'/%3E%3C/svg%3E") no-repeat 16px center}
+.tools input:focus{border-color:var(--red);box-shadow:0 0 14px rgba(255,42,69,.4);outline:0}
+.form input[type=text],.form select,.form textarea{border-radius:var(--r)}
+.g{padding:30px 24px 24px}
+.g::after{content:"";position:absolute;left:0;right:0;top:0;height:60px;background:linear-gradient(180deg,rgba(255,42,69,.12),transparent);pointer-events:none}
+#repositorio{background:linear-gradient(rgba(255,42,69,.035) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,rgba(255,42,69,.035) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(180deg,#120a0c,#0a0809 70%)}
+.js .rv{transition-delay:calc(var(--i,0)*90ms)}
+.top{position:fixed;right:20px;bottom:20px;z-index:60;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#0a0809;border:2px solid var(--red);color:var(--red);text-decoration:none;font:1.3rem 'Anton',sans-serif;box-shadow:0 0 16px rgba(255,42,69,.5);opacity:0;transform:translateY(14px);pointer-events:none;transition:.3s var(--ease)}
+.top.on{opacity:1;transform:none;pointer-events:auto}.top:hover{background:var(--red);color:#000}
+footer{padding:64px 0 0;background:linear-gradient(180deg,transparent,#0c0708)}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1.3fr;gap:40px;padding-bottom:40px}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr}}
+.fgrid>div>b{display:block;font:.85rem 'Anton',sans-serif;letter-spacing:.18em;color:var(--red);margin-bottom:12px;text-transform:uppercase}
+.fgrid a{display:block;color:var(--mut);text-decoration:none;margin:6px 0;transition:.2s}.fgrid a:hover{color:#fff;transform:translateX(4px)}
+.fgrid span{color:var(--mut);font-size:.88rem}
+.fb{display:flex;gap:14px;align-items:center}.fb img{width:62px;height:62px;border-radius:50%;border:2px solid var(--red);box-shadow:0 0 18px rgba(255,42,69,.5)}
+.fb b{display:block;color:var(--paper);font:1.1rem 'Anton',sans-serif;letter-spacing:.04em}
+.fcopy{border-top:1px solid var(--hair);padding:18px 24px;font-size:.8rem;color:#7d7168}
 </style>
+<script>var LOGO='data:image/png;base64,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';document.documentElement.className+=' js';function setLogo(){[].forEach.call(document.querySelectorAll('img[data-logo]'),function(i){i.src=LOGO});var f=document.getElementById('fav');if(f)f.href=LOGO}</script>
 </head>
 <body>
-
-<header class="site-nav">
-  <div class="nav-inner">
-    <a class="brand" href="#inicio">
-      <img src="logo-campamento.png" alt="El Campamento del Conocimiento Hip Hop" class="brand-mark">
-      <span class="brand-text">Memoria y Territorio
-        <span>Campamento del Conocimiento Hip Hop</span>
-      </span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">MENÚ</button>
-    <nav class="links" id="navLinks">
-      <a href="#inicio">Inicio</a>
-      <a href="#tesis">La tesis</a>
-      <a href="#colectivo">El colectivo</a>
-      <a href="#generaciones">Generaciones</a>
-      <a href="#entrevistas">Entrevistas</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero" id="inicio">
-  <div class="hero-inner">
-    <span class="eyebrow-line">Investigación de grado · Barrio El Codito, Bogotá</span>
-    <h1>Memoria y territorio: <em>hip hop</em> en El Codito</h1>
-    <p class="lede">
-      Una reconstrucción de la historia del hip hop en El Codito a través de cuatro generaciones
-      de raperos, grafiteros, bailarines y colectivos que han hecho del barrio un territorio de
-      resistencia, identidad y memoria.
-    </p>
-    <div class="place">
-      <div><strong>1998</strong><small>Generación pionera</small></div>
-      <div><strong>4</strong><small>generaciones documentadas</small></div>
-      <div><strong>Hoy</strong><small>El Codito, Bogotá</small></div>
-    </div>
-  </div>
-</section>
-
+<div id="loader"><div><img data-logo alt=""><p>CARGANDO MEMORIA</p><div class="bar"><i></i></div></div></div><script>setLogo()</script>
+<div class="prog" id="prog"></div>
+<header class="nav"><div class="wrap">
+<a class="brand" href="#inicio"><img data-logo alt="Campamento del Conocimiento Hiphop"><span>Memoria y Territorio<small>Campamento del Conocimiento Hiphop</small></span></a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="links">MENÚ</button>
+<nav class="links" id="links"><a href="#tesis">Tesis</a><a href="#colectivo">Colectivo</a><a href="#generaciones">Generaciones</a><a href="#entrevistas">Entrevistas</a><a href="#anecdotas">Anécdotas</a><a href="#repositorio">Repositorio</a><a href="#aviso">Aviso</a></nav>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<div><span class="kick">Tesis · Barrio El Codito, Bogotá</span>
+<h1>Memoria y territorio: <em>Hiphop</em> en El Codito</h1>
+<p class="lede">Cuatro generaciones de raperos, grafiteros, bailarines y colectivos que han hecho del barrio un territorio de resistencia, identidad y memoria, y un archivo vivo para que no se pierda.</p>
+<div class="stats"><div><b>1998</b>Generación pionera</div><div><b>4</b>generaciones</div><div><b>9</b>entrevistas</div></div>
+<a class="btn" href="#repositorio">ENTRAR AL REPOSITORIO</a><a class="btn" href="#anecdotas">CUÉNTANOS UNA ANÉCDOTA</a></div>
+<div class="ring"><img data-logo class="hero-logo" alt="Logo del Campamento del Conocimiento Hiphop"></div>
+</div></section>
+<div class="mq"><div>HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ HIPHOP ✦ MEMORIA ✦ TERRITORIO ✦ EL CODITO ✦ </div></div>
+<section id="tesis"><div class="wrap grid2">
+<div>
+<div class="head"><span class="kick">La investigación</span><h2>Una tesis desde y para el territorio</h2></div>
+<p>El Codito tiene una memoria abundante del Hiphop que se ha ido perdiendo por falta de archivo y documentación. Ese vacío no solo borra el pasado: también impide consolidar un colectivo organizado y sostener los procesos culturales en el tiempo.</p>
+<p class="q">¿Cómo puede el Campamento del Conocimiento Hiphop construir un archivo autónomo que preserve la memoria y sea motor de sostenibilidad cultural y política?</p>
+</div>
+<div>
+<div class="card"><h3>Objetivo general</h3><p>Crear un archivo digital de memoria colectiva del Hiphop en El Codito que evidencie la transformación cultural del barrio y ayude a analizar el estancamiento de sus procesos organizativos, mediante entrevistas con líderes y artistas del territorio.</p></div>
+<div class="card"><h3>Objetivos específicos</h3><ol><li>Identificar estudios sobre cultura en barrios de la periferia bogotana y del país.</li><li>Recopilar, limpiar, ordenar, digitalizar y editar el material de los pioneros.</li><li>Diseñar una plataforma digital como repositorio de la memoria para las nuevas generaciones.</li></ol></div>
+<div class="card"><h3>Metodología</h3><p>Investigación-acción participativa · Etnografía urbana · Curaduría colectiva «juntar, limpiar y ordenar» · Entrevistas semiestructuradas.</p></div>
+</div></div></section>
+<section class="colectivo" id="colectivo" style="background:var(--bk2)"><div class="wrap">
+<img data-logo alt="El Campamento del Conocimiento Hiphop">
+<div><span class="kick">El colectivo</span><div class="head" style="margin-bottom:14px"><h2>El Campamento del Conocimiento Hiphop</h2></div>
+<p>Esta tesis nace del trabajo del Campamento, un colectivo que reúne saberes, historias y prácticas de la cultura Hiphop en El Codito, desde el rap, el grafiti, el baile y el conocimiento compartido entre generaciones.</p></div>
+</div></section>
+<section id="generaciones" class="alt"><div class="wrap">
+<div class="head"><span class="kick">Línea de tiempo</span><h2>Cuatro generaciones, un mismo territorio</h2></div>
+<div class="gens">
+<div class="g"><span class="n">1</span><div class="y">1998 — 2005</div><h3>Generación pionera</h3><p>Quienes sembraron el rap, el grafiti y las primeras reuniones barriales alrededor del Hiphop.</p></div>
+<div class="g"><span class="n">2</span><div class="y">2005 — 2012</div><h3>Segunda generación</h3><p>Recibe el legado y lo expande con festivales en El Chaparral, noches de música y procesos con jóvenes.</p></div>
+<div class="g"><span class="n">3</span><div class="y">2012 — 2020</div><h3>Tercera generación</h3><p>Consolida colectivos, festivales populares y procesos con mujeres.</p></div>
+<div class="g"><span class="n">4</span><div class="y">2020 — actualidad</div><h3>Cuarta generación</h3><p>La generación actual, que sostiene y renueva el trabajo del barrio y del Campamento.</p></div>
+</div></div></section>
 <hr class="rule">
-
-<section id="tesis">
-  <div class="wrap tesis-grid">
-    <div>
-      <div class="section-head">
-        <span class="kicker">Sobre el proyecto</span>
-        <h2>Una tesis desde y para el territorio</h2>
-      </div>
-      <p>
-        Esta investigación estudia cómo el hip hop ha construido memoria y territorio en El Codito,
-        un barrio periférico de Bogotá donde el rap, el grafiti, el breaking y el conocimiento se
-        volvieron herramientas de organización comunitaria. A través de entrevistas, archivo audiovisual
-        y trabajo de campo, el proyecto documenta las voces de quienes han sostenido esta cultura desde
-        finales de los años noventa hasta la actualidad.
-      </p>
-      <p>
-        El trabajo parte de cuatro generaciones de hacedores del hip hop en el barrio, entendidas no
-        como cortes rígidos en el tiempo sino como relevos de conocimiento: cada generación recibe,
-        transforma y entrega lo aprendido a la siguiente.
-      </p>
-    </div>
-    <div>
-      <div class="fact-card">
-        <h3>Enfoque</h3>
-        <p>Memoria oral, territorio urbano y cultura hip hop como práctica comunitaria.</p>
-      </div>
-      <div class="fact-card">
-        <h3>Método</h3>
-        <p>Entrevistas en video, archivo fotográfico y recorridos por el barrio con sus protagonistas.</p>
-      </div>
-      <div class="fact-card">
-        <h3>Lugar</h3>
-        <p>Barrio El Codito, localidad de Usaquén, Bogotá.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="colectivo" id="colectivo">
-  <div class="wrap">
-    <img src="logo-campamento.png" alt="El Campamento del Conocimiento Hip Hop" class="colectivo-badge">
-    <div>
-      <span class="eyebrow-line">El colectivo detrás de la investigación</span>
-      <h2>El Campamento del Conocimiento Hip Hop</h2>
-      <p>
-        Esta tesis nace del trabajo del Campamento del Conocimiento Hip Hop, un colectivo que reúne
-        saberes, historias y prácticas de la cultura hip hop en El Codito. Desde ahí se impulsa este
-        ejercicio de memoria: recoger las voces de quienes han construido el barrio a través del rap,
-        el grafiti, el baile y el conocimiento compartido entre generaciones.
-      </p>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<section id="generaciones">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">Línea de tiempo</span>
-      <h2>Cuatro generaciones, un mismo territorio</h2>
-    </div>
-    <div class="timeline">
-
-      <div class="gen" data-num="1">
-        <div class="years">1998 — 2005</div>
-        <h3>Generación pionera</h3>
-        <p>
-          Los primeros en traer el hip hop a El Codito: quienes sembraron el rap, el grafiti y las
-          primeras reuniones barriales alrededor de la cultura. Sienta las bases del territorio como
-          espacio de encuentro.
-        </p>
-        <span class="tag">Editar: nombres, hitos y colectivos de esta generación</span>
-      </div>
-
-      <div class="gen" data-num="2">
-        <div class="years">2005 — [año]</div>
-        <h3>Segunda generación</h3>
-        <p>
-          Recibe el legado de la generación pionera y lo expande: nuevos colectivos, nuevas formas de
-          organización y la consolidación del hip hop como práctica cotidiana en el barrio.
-        </p>
-        <span class="tag">Editar: años exactos, nombres, hitos</span>
-      </div>
-
-      <div class="gen" data-num="3">
-        <div class="years">[año] — [año]</div>
-        <h3>Tercera generación</h3>
-        <p>
-          Entre esta generación se encuentra <strong>Nosko</strong>, quien continúa el relevo de
-          conocimiento y aporta su testimonio sobre el hip hop en El Codito en esta época.
-        </p>
-        <span class="tag">Editar: años exactos, hitos de esta etapa</span>
-      </div>
-
-      <div class="gen" data-num="4">
-        <div class="years">[año] — hoy</div>
-        <h3>Cuarta generación</h3>
-        <p>
-          La generación actual, que sostiene y renueva el trabajo del Campamento del Conocimiento Hip
-          Hop y de colectivos como Fraternidad Urbana y Dont Stop en el presente del barrio.
-        </p>
-        <span class="tag">Editar: año de inicio, hitos recientes</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<section id="entrevistas">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">Archivo audiovisual</span>
-      <h2>Entrevistas</h2>
-    </div>
-    <div class="entrevistas-grid">
-
-      <div class="video-card">
-        <div class="video-frame">
-          <!-- Cuando tengas el link de YouTube, reemplaza este div por:
-          <iframe src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" title="Entrevista a Binrro Rys" allowfullscreen></iframe> -->
-          <div class="placeholder">
-            <span class="icon">▶</span>
-            <span>Video en edición · próximamente en YouTube</span>
-          </div>
-        </div>
-        <div class="video-info">
-          <h3>Binrro Rys</h3>
-          <span class="role">Fraternidad Urbana</span>
-          <p>Testimonio sobre memoria, territorio y trayectoria dentro del hip hop de El Codito.</p>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-frame">
-          <!-- <iframe src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" title="Entrevista a Nosko" allowfullscreen></iframe> -->
-          <div class="placeholder">
-            <span class="icon">▶</span>
-            <span>Video en edición · próximamente en YouTube</span>
-          </div>
-        </div>
-        <div class="video-info">
-          <h3>Nosko</h3>
-          <span class="role">Tercera generación</span>
-          <p>Relato de la tercera generación sobre el relevo de conocimiento en el barrio.</p>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-frame">
-          <!-- <iframe src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" title="Entrevista a Bogcodi" allowfullscreen></iframe> -->
-          <div class="placeholder">
-            <span class="icon">▶</span>
-            <span>Video en edición · próximamente en YouTube</span>
-          </div>
-        </div>
-        <div class="video-info">
-          <h3>Bogcodi</h3>
-          <span class="role">Dont Stop · Colectivo de Hip Hop</span>
-          <p>Perspectiva del colectivo Dont Stop sobre el territorio y la cultura hip hop.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="archivo">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">Este archivo sigue creciendo</span>
-      <h2>Próximas entrevistas</h2>
-    </div>
-    <div class="archivo-grid">
-      <div class="archivo-card">
-        <strong>Plasma</strong>
-        Espacio reservado para la próxima entrevista, con la facilitadora del proceso.
-      </div>
-      <div class="archivo-card">
-        <strong>Por confirmar</strong>
-        Duplica esta tarjeta y la de "video-card" arriba cada vez que subas una nueva entrevista.
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer id="contacto">
-  <div class="wrap">
-    <h2>Sigamos construyendo memoria</h2>
-    <p>
-      Este sitio es un archivo vivo del proceso de tesis y del trabajo del Campamento del Conocimiento
-      Hip Hop en El Codito. Si hiciste parte de alguna de estas generaciones y quieres compartir tu
-      testimonio, escríbenos.
-    </p>
-    <div class="foot-meta">
-      <span>Memoria y Territorio · Hip Hop en El Codito</span>
-      <span>Campamento del Conocimiento Hip Hop</span>
-    </div>
-  </div>
+<section id="entrevistas"><div class="wrap">
+<div class="head"><span class="kick">Archivo audiovisual</span><h2>Entrevistas</h2></div>
+<p style="max-width:70ch;color:var(--mut)">Nueve entrevistas de unos 12 minutos cada una. Aquí va primero la muestra: un adelanto de 14 minutos con fragmentos de todas.</p>
+<div class="vc featured"><div class="vf" id="muestra"></div><div class="vi"><small>Muestra · 14 min</small><h3>Adelanto de las entrevistas</h3></div></div>
+<div class="vgrid" id="entrev"></div>
+</div></section>
+<section id="repositorio" class="alt"><div class="wrap">
+<div class="head"><span class="kick">Archivo vivo · en construcción</span><h2>Repositorio de memoria</h2></div>
+<p style="max-width:72ch;color:var(--mut)">Videos, festivales, procesos y fotografías del Hiphop en El Codito, reunidos y organizados como una curaduría colectiva de material que estaba disperso. Los enlaces no son de nuestra autoría: pertenecen a sus creadores. <strong style="color:var(--paper)">Nos falta seguir investigando.</strong></p>
+<div class="tools"><input id="q" type="search" placeholder="Buscar por título, año, festival, colectivo…" aria-label="Buscar en el repositorio"></div>
+<div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+<p class="cnt" id="cnt"></p>
+<div class="vgrid" id="grid"></div>
+<div class="card" style="margin-top:34px"><h3>Lo que nos falta investigar</h3><ol>
+<li>Más material de la segunda y la cuarta generación.</li>
+<li>Archivo fotográfico y sonoro anterior a 2009.</li>
+<li>Verificar fechas, autorías y enlaces pendientes de cada pieza.</li>
+<li>Más voces de mujeres y de otros colectivos del barrio.</li></ol></div>
+</div></section>
+<section id="anecdotas" class="crim"><div class="wrap grid2">
+<div><div class="head"><span class="kick">Voces del barrio</span><h2>Cuéntanos una anécdota del Hiphop en El Codito</h2></div>
+<p style="color:var(--mut)">Un freestyle en la esquina, un festival sin permisos, una clase de breakdance… Escríbela como la recuerdas. Revisamos cada relato antes de publicarlo en el archivo.</p>
+<form class="form" id="fa">
+<label for="an1">NOMBRE O SEUDÓNIMO (OPCIONAL)</label><input id="an1" type="text" maxlength="60" autocomplete="off">
+<label for="an2">¿DE QUÉ ÉPOCA ES?</label><select id="an2"><option>1998 — 2005</option><option>2005 — 2012</option><option>2012 — 2020</option><option>2020 — actualidad</option><option>No lo sé</option></select>
+<label for="an3">TU ANÉCDOTA</label><textarea id="an3" maxlength="1500" required placeholder="Cuenta qué pasó, dónde y con quién…"></textarea>
+<div class="ck"><input type="checkbox" id="an4" required><label for="an4">Autorizo que mi relato se use en este archivo con fines académicos y comunitarios.</label></div>
+<button class="btn" type="submit">ENVIAR ANÉCDOTA</button><p class="msg" id="fm" role="status"></p>
+</form></div>
+<div><div class="head" style="margin-bottom:18px"><span class="kick">Relatos publicados</span></div><div id="muro"></div></div>
+</div></section>
+<section id="aviso" style="padding-top:20px"><div class="wrap"><div class="notice">
+<h2>Aviso de uso</h2>
+<p>Este proyecto es <strong>exclusivamente para estudiar la memoria del Hiphop en El Codito y para seguir alimentando el repositorio</strong>. Nadie podrá vender ni comprar su contenido.</p>
+<p>Los enlaces del repositorio no son de nuestra autoría: son producto de una larga búsqueda y selección de material público, y sus derechos pertenecen a quienes lo crearon. Seguimos investigando y verificando.</p>
+</div></div></section>
+<section id="documento" style="padding-top:20px"><div class="wrap"><div class="card"><h3>La tesis · documento</h3>
+<p>Aquí irá una parte de la tesis, y luego el documento completo. <!-- Sube tu PDF al repo con el nombre tesis.pdf --></p>
+<a class="btn" href="tesis.pdf" target="_blank" rel="noopener">ABRIR DOCUMENTO</a></div></div></section>
+</main>
+<footer>
+<div class="wrap fgrid">
+<div class="fb"><img data-logo alt="Logo del Campamento del Conocimiento Hiphop"><div><b>Memoria y Territorio</b><span>Hiphop en El Codito · Bogotá</span></div></div>
+<div><b>Explorar</b><a href="#tesis">Tesis</a><a href="#generaciones">Generaciones</a><a href="#entrevistas">Entrevistas</a><a href="#repositorio">Repositorio</a><a href="#anecdotas">Anécdotas</a></div>
+<div><b>Uso del archivo</b><span>Uso académico y comunitario. Ningún contenido puede venderse ni comprarse. Los enlaces pertenecen a sus autores.</span></div>
+</div>
+<div class="wrap fcopy">Campamento del Conocimiento Hiphop · El Codito, Bogotá</div>
 </footer>
-
+<a class="top" id="top" href="#inicio" aria-label="Volver arriba">↑</a>
 <script>
-  var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  toggle.addEventListener('click', function(){
-    var isOpen = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
+window.ytId=function(u){var m=(u||'').match(/(?:v=|youtu\.be\/)([\w-]{11})/);return m?m[1]:''};
+(function(){
+var L=document.getElementById('loader'),t0=Date.now();
+function hide(){setTimeout(function(){if(L)L.classList.add('off')},Math.max(0,1500-(Date.now()-t0)))}
+window.addEventListener('load',hide);setTimeout(hide,4000);
+var b=document.getElementById('burger'),n=document.getElementById('links');
+if(b)b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+})();
 </script>
+<script>
+// ===== CONFIGURA AQUÍ TUS VIDEOS: pega el link de YouTube entre las comillas =====
+var MUESTRA='';
+var ENTREVISTAS=[
+['Binrro Rys','Fraternidad Urbana',''],
+['Entrevista 2','Tercera generación',''],
+['Bogcodi','Dont Stop · Colectivo de Hiphop',''],
+['Entrevista 4','Por publicar',''],['Entrevista 5','Por publicar',''],['Entrevista 6','Por publicar',''],
+['Entrevista 7','Por publicar',''],['Entrevista 8','Por publicar',''],['Entrevista 9','Por publicar','']
+];
+function frame(u,t){var y=ytId(u);if(!y)return'<div class="ph"><span><i>▶</i>Video en edición · próximamente</span></div>';if(location.protocol==='file:')return'<a class="ph" style="text-decoration:none" href="'+u+'" target="_blank" rel="noopener"><span><i>▶</i>Ver en YouTube ↗</span></a>';return'<iframe src="https://www.youtube.com/embed/'+y+'" referrerpolicy="strict-origin-when-cross-origin" title="'+t+'" allowfullscreen loading="lazy"></iframe>'}
+document.getElementById('muestra').innerHTML=frame(MUESTRA,'Muestra de entrevistas');
+document.getElementById('entrev').innerHTML=ENTREVISTAS.map(function(e){return'<div class="vc"><div class="vf">'+frame(e[2],'Video: '+e[0])+'</div><div class="vi"><h3>'+e[0]+'</h3><small>'+e[1]+'</small></div></div>'}).join('');
+</script>
+<script>
 
+// REPOSITORIO · cada fila: [categoría, título, fecha, descripción, enlace]
+// Para sumar material nuevo: copia una fila, pégala al final y cambia los datos (YouTube se detecta solo).
+// Si falta el enlace, deja '' y la ficha queda marcada como pendiente.
+// Categorías: Festivales · Colectivos · En vivo · Procesos y documentales · Mujeres y Hiphop · Canales y enlaces · Fotografía
+var REPO=[
+['Colectivos','Colectivo Fraternidad Urbana · Usaquén','Mayo 2013','Presentación de MC Motaz con el rap del Frasser, Fraternidad Urbana Z1, en la cancha Nuevo Horizonte.','https://www.youtube.com/watch?v=_JQ0lalwEvg'],
+['Colectivos','Rap Tour sin Fronteras · Fraternidad Urbana','7 sept 2013','Colectivos de distintas zonas de Bogotá se unen para mitigar problemáticas sociales.','https://youtu.be/qGoktPkhUJU'],
+['Colectivos','Colectivo Fraternidad Urbana · Usaquén','9 jun 2015','Enseñanza del Hiphop y el breakdance a jóvenes, niños y niñas de Usaquén como alternativa para el tiempo libre.',''],
+['Festivales','Welcome to Codito v1 (Chaparral) · parte 1','21 sept 2010','Evento de Hiphop de organizaciones de los cerros nororientales de Bogotá. Realización audiovisual: Omega 7.','https://www.youtube.com/watch?v=QIUca4Mqj6A'],
+['Festivales','Welcome to Codito v1 (Chaparral) · parte 2','21 sept 2010','Evento de organizaciones de los cerros nororientales de Bogotá. Realización audiovisual: Omega 7.','https://www.youtube.com/watch?v=yJQwTMuVXNM'],
+['Festivales','Welcome to Codito v1 (Chaparral) · parte 3','7 oct 2010','Parte 3 del festival, realizado en El Chaparral por organizaciones del sector, sin permisos distritales.','https://www.youtube.com/watch?v=oy59-efZd1E'],
+['Festivales','Welcome to Codito v2 (Chaparral parqueadero)','2010','Segunda edición, en un espacio más amplio de El Chaparral, zona usada como parqueadero y para eventos.','https://youtu.be/1DTD-uVziH8'],
+['Festivales','Welcome to Codito v3 · jornada de día','2011','Tercera edición en El Codito, con una mula como tarima. Canal de YouTube JAV.','https://youtu.be/rhb3dck7Nms'],
+['Festivales','Welcome to Codito v3 · jornada de noche','2011','Tercera edición en El Codito, con una mula como tarima. Canal de YouTube JAV.','https://youtu.be/leE4FeLdlAM'],
+['Festivales','1.º Festival Codito de Colores · Buena Vista','17 mayo 2015','Primera versión del festival popular en el barrio Buena Vista, sector El Codito.','https://www.youtube.com/watch?v=mUJBCW0tWm0'],
+['Festivales','2.º Festival Codito de Colores · Horizontes','15 nov 2015','Segunda versión del festival popular en el barrio Horizontes, sector El Codito.','https://youtu.be/iioDUIo7FWU'],
+['Festivales','3.º Festival Codito de Colores · Villas de la Capilla','20 oct 2019','Tercera versión del festival, con artistas del sector y Vox Populi desde Soacha.','https://www.youtube.com/watch?v=SWfCH26j1Y4'],
+['En vivo','Tierra alta en vivo · Plasma','30 jul 2009','Plasma, agrupación pionera, presenta su canción en Noches Púrpuras.','https://youtu.be/MzzZPELSmiQ'],
+['En vivo','AmalGama KhamO Amos · Noche Púrpura','28 mar 2011','Presentación de la agrupación en Noche Púrpura (Chaparral, la rotonda).','https://youtu.be/FXQjo_5DlD8'],
+['Procesos y documentales','Documental · El Codito, los cimientos de un barrio en crecimiento','7 ago 2021','El nombre nace de la forma de las casas contra el cerro, sin salidas laterales, como el codo de una persona.','https://www.youtube.com/watch?v=bLDajJLFsDU'],
+['Procesos y documentales','Proceso de estudiantes','11 abr 2010','Conversación con jóvenes en el parque del Chaparral sobre sus experiencias en la iniciativa, para un documento final.','https://youtu.be/ED6KnaysJGU'],
+['Procesos y documentales','Con Ojos de Joven · Usaquén','2012','Inventario social construido con herramientas de comunicación para el cambio social.','https://youtu.be/G1er8ZG7jeQ'],
+['Procesos y documentales','Codito de Colores · proyecto','2015','Proyecto de reapropiación del espacio y empoderamiento del territorio.','https://youtu.be/vpbpyXqLdoU'],
+['Procesos y documentales','Galería Hiphop · barrio El Codito','6 mayo 2024','Representantes de la cultura hablan del territorio.','https://youtu.be/VXiiL0uU6mE'],
+['Mujeres y Hiphop','Mujeres Fresia · IV Festival Tributo a la Mujer','2018','Proceso «Hiphop, la voz de mi barrio»: Hiphop libre de sexismos, con Mesa Distrital Graffiti Mujer, la JAC y artistas de danza y rap. Canal Mujeres Fresia.','https://www.youtube.com/watch?v=tlyuFobJhLA'],
+['Mujeres y Hiphop','Rolísimos · La «hiphopper» de El Codito','12 jul 2017','Historia de Fernanda Blanco, artista de Hiphop y líder comunitaria de Usaquén.','https://youtu.be/q3ZwYKEizEg'],
+['Canales y enlaces','Recorridos (Bogotá turismo)','','Recorrido por murales hechos por artistas del barrio y gestores culturales.','https://www.facebook.com/share/r/1ZFfRy4Pgk/'],
+['Canales y enlaces','Canal Pictograma','','Canal que destaca el grafiti en Colombia; una de sus líderes vive en El Codito.','https://www.youtube.com/@Pictograma.Col2023'],
+['Canales y enlaces','Canal Asalto Rap','','Videos importantes sobre la historia del Hiphop en El Codito.','https://www.youtube.com/@PUROWESO15'],
+['Fotografía','Festival Welcome to Codito · álbum de fotos','2010','Álbum de Corp Omega VII radiovisuales con 13 fotografías del festival.','https://www.flickr.com/photos/97218753@N05/albums/72157634272037150/']
+];
+</script>
+<script>
+
+(function(){
+var items=REPO.map(function(r){return{c:r[0],t:r[1],f:r[2],d:r[3],u:r[4],y:ytId(r[4])}}),cats=['Todos'],q='',cat='Todos';
+items.forEach(function(i){if(cats.indexOf(i.c)<0)cats.push(i.c)});
+var grid=document.getElementById('grid'),cnt=document.getElementById('cnt'),chips=document.getElementById('chips');
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){
+var l=items.filter(function(i){return(cat==='Todos'||i.c===cat)&&(i.t+' '+i.d+' '+i.f+' '+i.c).toLowerCase().indexOf(q)>-1});
+cnt.textContent=l.length+' de '+items.length+' registros';
+grid.innerHTML=l.map(function(i){
+var th=i.y?'<div class="th play" role="button" tabindex="0" aria-label="Reproducir video" style="background-image:url(https://i.ytimg.com/vi/'+i.y+'/hqdefault.jpg)"><span>▶ VER AQUÍ</span></div>':(i.u?'<a class="th" href="'+esc(i.u)+'" target="_blank" rel="noopener"><span>ABRIR ENLACE ↗</span></a>':'<div class="th"><span>PENDIENTE</span></div>');
+var ln=i.u?'<a class="ver" href="'+esc(i.u)+'" target="_blank" rel="noopener">'+(i.y?'Ver en YouTube ↗':'Abrir enlace ↗')+'</a>':'';
+return'<div class="rc" data-y="'+i.y+'">'+th+'<div class="rb"><small>'+esc(i.c)+(i.f?' · '+esc(i.f):'')+'</small><h3>'+esc(i.t)+'</h3><p>'+esc(i.d)+(i.u?'':' (enlace por verificar)')+'</p>'+ln+'</div></div>'}).join('')||'<p>No hay resultados.</p>';
+}
+chips.innerHTML=cats.map(function(c,k){return'<button class="chip'+(k?'':' on')+'">'+c+'</button>'}).join('');
+chips.onclick=function(e){if(e.target.tagName!=='BUTTON')return;cat=e.target.textContent;[].forEach.call(chips.children,function(b){b.classList.toggle('on',b===e.target)});render()};
+document.getElementById('q').oninput=function(){q=this.value.toLowerCase();render()};
+function play(t){var c=t.closest('.rc');if(location.protocol==='file:'){window.open(c.querySelector('.ver').href,'_blank','noopener');return}t.outerHTML='<div class="vf"><iframe src="https://www.youtube.com/embed/'+c.dataset.y+'?autoplay=1&rel=0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Video del repositorio"></iframe></div>'}
+if(location.protocol==='file:')cnt.insertAdjacentHTML('beforebegin','<div class="an"><p>Estás viendo el archivo desde tu computador: aquí los videos se abren en YouTube. Ya publicado en GitHub Pages, se reproducen dentro de la página.</p></div>');
+grid.onclick=function(e){var t=e.target.closest('.play');if(t)play(t)};
+grid.onkeydown=function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('play')){e.preventDefault();play(e.target)}};
+render();
+})();
+</script>
+<script>
+var CONTACTO={formspree:'',whatsapp:'',correo:''};
+/* CONTACTO: llena UNO. whatsapp: 573001234567 (con indicativo, sin +) · correo: tu@correo.com · formspree: https://formspree.io/f/XXXX */
+var ANECDOTAS=[
+/* Anécdotas ya revisadas, una por línea: ['Nombre o seudónimo','Época','Relato'], */
+];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var mu=document.getElementById('muro');
+mu.innerHTML=ANECDOTAS.length?ANECDOTAS.map(function(a){return'<div class="an"><p>«'+esc(a[2])+'»</p><small>'+esc(a[0])+' · '+esc(a[1])+'</small></div>'}).join(''):'<div class="an"><p>Aquí aparecerán los relatos del barrio. Sé la primera voz del archivo.</p><small>Anécdotas del Hiphop en El Codito</small></div>';
+document.getElementById('fa').onsubmit=function(e){e.preventDefault();
+var f=e.target,n=document.getElementById('an1').value.trim()||'Anónimo',ep=document.getElementById('an2').value,t=document.getElementById('an3').value.trim(),msg=document.getElementById('fm');
+var txt='Anécdota del Hiphop en El Codito\nNombre: '+n+'\nÉpoca: '+ep+'\n\n'+t;
+function ok(m){msg.textContent=m;f.reset()}
+function bad(){msg.textContent='No se pudo enviar. Intenta de nuevo.'}
+if(CONTACTO.formspree){fetch(CONTACTO.formspree,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({nombre:n,epoca:ep,anecdota:t})}).then(function(r){r.ok?ok('¡Gracias! Tu anécdota llegó al colectivo.'):bad()}).catch(bad)}
+else if(CONTACTO.whatsapp){window.open('https://wa.me/'+CONTACTO.whatsapp+'?text='+encodeURIComponent(txt),'_blank');ok('Se abrió WhatsApp con tu anécdota lista para enviar.')}
+else if(CONTACTO.correo){location.href='mailto:'+CONTACTO.correo+'?subject='+encodeURIComponent('Anécdota Hiphop El Codito')+'&body='+encodeURIComponent(txt);ok('Se abrió tu correo con la anécdota lista para enviar.')}
+else{(navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){ok('Copiamos tu anécdota. Envíasela al colectivo por el medio que prefieras.')}).catch(function(){msg.textContent='Copia tu texto y envíalo al colectivo.'})}
+};
+</script>
+<script>(function(){var els=document.querySelectorAll('.card,.g,.head,.notice,.featured,.an');
+if(!('IntersectionObserver' in window)){[].forEach.call(els,function(e){e.classList.add('in')});return}
+var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target)}})},{threshold:.12});
+[].forEach.call(els,function(e){e.classList.add('rv');o.observe(e)})})();setLogo();</script>
+<script>
+(function(){var bar=document.getElementById('prog'),top=document.getElementById('top'),nav=document.querySelector('.nav'),d=document.documentElement;
+function s(){var p=d.scrollTop/((d.scrollHeight-d.clientHeight)||1);bar.style.transform='scaleX('+p+')';top.classList.toggle('on',d.scrollTop>700);nav.classList.toggle('sm',d.scrollTop>40)}
+addEventListener('scroll',s,{passive:true});s();
+var ls=[].slice.call(document.querySelectorAll('.links a[href^="#"]')),map={};
+ls.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){ls.forEach(function(a){a.classList.remove('on')});var a=map[x.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
+Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)o.observe(el)})}
+document.getElementById('links').addEventListener('click',function(){this.classList.remove('open')});
+[].forEach.call(document.querySelectorAll('.gens .g'),function(e,i){e.style.setProperty('--i',i)});
+})();
+</script>
 </body>
 </html>
